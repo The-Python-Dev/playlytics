@@ -49,15 +49,15 @@ After every completed module:
 ## Current Status
 
 **Phase:** 1 — Models
-**Current Module:** models/analysis_result.py
-**Overall Progress:** 2 of 28 modules complete
+**Current Module:** models/metrics.py
+**Overall Progress:** 3 of 28 modules complete
 
 Last action completed:
-- models/rule_result.py implemented and tested (6 tests passing)
+- models/player_stats.py implemented and tested (7 tests passing)
 - CHANGELOG.md updated
 
 Next action:
-- Implement models/analysis_result.py
+- Implement models/metrics.py
 
 ## Approved Architecture
 
@@ -96,11 +96,11 @@ ui/views/result_view.py
 Phase 1 — Models
 ✅ models/severity.py
 ✅ models/rule_result.py
-⏳ models/analysis_result.py      ← CURRENT
+✅ models/player_stats.py
+⏳ models/metrics.py              ← CURRENT
+⬜ models/analysis_result.py
 ⬜ models/validation_result.py
 ⬜ models/controller_result.py
-⬜ models/player_stats.py
-⬜ models/metrics.py
 ⬜ models/configuration.py
 
 Phase 2 — Core
@@ -180,6 +180,19 @@ RuleResult dataclass representing the output of a single rule evaluation.
 Holds rule_name, severity, message, optional suggestion, and passed flag.
 Produced by every rule, consumed by the UI renderer.
 **Commit:** feat(models): add RuleResult dataclass with tests
+
+### models/player_stats.py
+**Status:** ✅ Complete
+**Tests:** 7 passing (pytest)
+**Location:** src/models/player_stats.py
+**Test Location:** tests/test_models/test_player_stats.py
+**Description:**
+Frozen dataclass holding validated raw player input.
+Kills, deaths, accuracy, and weapon.
+Immutable to prevent accidental mutation during analysis.
+Derived values (K/D) live separately in Metrics.
+**Commit:** feat(models): add PlayerStats frozen dataclass with tests
+
 ## Key Design Decisions (Locked)
 
 | Decision | Choice | Reason |

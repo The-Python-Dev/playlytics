@@ -17,6 +17,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for Severity enum (5 tests, all passing)
 - models/rule_result.py: RuleResult dataclass for single rule evaluation output
 - Unit tests for RuleResult (6 tests, all passing)
+- models/player_stats.py: PlayerStats frozen dataclass for validated raw input
+- Unit tests for PlayerStats (7 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
