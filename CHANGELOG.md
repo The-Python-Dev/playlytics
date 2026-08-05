@@ -15,6 +15,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - models/severity.py: Severity enum with four levels
   (SUCCESS, INFO, WARNING, ERROR)
 - Unit tests for Severity enum (5 tests, all passing)
+- models/rule_result.py: RuleResult dataclass for single rule evaluation output
+- Unit tests for RuleResult (6 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
