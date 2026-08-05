@@ -1,0 +1,22 @@
+# Changelog
+
+All notable changes to Playlytics V3 are documented here.
+
+Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
+This project follows [Semantic Versioning](https://semver.org/).
+
+---
+
+## [Unreleased] — 3.0.0 In Development
+
+### Added
+- Full project structure created (src/, tests/, docs/)
+- Planning documentation (PRD, Architecture, Rules, Phases, Design, Memory)
+- models/severity.py: Severity enum with four levels
+  (SUCCESS, INFO, WARNING, ERROR)
+- Unit tests for Severity enum (5 tests, all passing)
+
+### Infrastructure
+- Git repository initialized
+- .gitignore configured
+- pytest adopted as testing framework

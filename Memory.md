@@ -61,8 +61,6 @@ Last action completed:
 Next action:
 - Implement models/rule_result.py
 
----
-
 ## Approved Architecture
 
 Architecture is fully approved and locked.
@@ -165,15 +163,14 @@ Phase 11 — Packaging and Release
 
 ### models/severity.py
 **Status:** ✅ Complete
-**Date:** [Add date when committed]
+**Tests:** 5 passing (pytest)
+**Location:** src/models/severity.py
+**Test Location:** tests/test_models/test_severity.py
 **Description:**
-Severity enum with four levels.
-SUCCESS, INFO, WARNING, ERROR.
-Used by all result types to communicate meaning to the UI.
-**Tests:** tests/test_models/test_severity.py
-**Commit:** feat(models): add Severity enum
-
----
+Severity enum with four levels: SUCCESS, INFO, WARNING, ERROR.
+Used by all result types to communicate meaning to the UI layer
+without string matching.
+**Commit:** feat(models): add Severity enum with tests
 
 ## Key Design Decisions (Locked)
 
@@ -294,11 +291,11 @@ These are documented in docs/KNOWN_ISSUES.md
 | docs/Phases.md | ✅ Complete |
 | docs/Design.md | ✅ Complete |
 | docs/Memory.md | ✅ Complete |
+| CHANGELOG.md | ✅ Complete |
 | docs/ROADMAP.md | ⬜ Not yet written |
 | docs/TEST_CASES.md | ⬜ To be migrated from V2.9 |
 | docs/KNOWN_ISSUES.md | ⬜ Not yet written |
 | README.md | ⬜ Not yet written |
-| CHANGELOG.md | ⬜ Not yet written |
 
 ---
 
@@ -310,6 +307,14 @@ These are documented in docs/KNOWN_ISSUES.md
 - Completed models/severity.py
 - Created all six planning documents
 
+### Session 2
+- Reorganized folder structure (app/ → src/)
+- Created full layered folder structure
+- Deleted old prototype code
+- Set up git repository
+- Adopted pytest for testing
+- Completed models/severity.py with tests
+- Updated CHANGELOG.md and Memory.md
 ---
 
 *This file is the memory of Playlytics V3.*

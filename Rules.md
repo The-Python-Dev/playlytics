@@ -96,7 +96,7 @@ Recommend the maintainable solution even if it takes longer.
 ### Allowed
 - Python Standard Library (all modules)
 - Tkinter (UI only)
-- unittest (testing)
+- pytest (testing)
 - logging (logging only)
 - PyInstaller (packaging only, not imported in code)
 
