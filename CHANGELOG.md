@@ -21,6 +21,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for PlayerStats (7 tests, all passing)
 - models/metrics.py: Metrics frozen dataclass for computed values
 - Unit tests for Metrics (7 tests, all passing)
+- models/analysis_result.py: AnalysisResult frozen dataclass for full pipeline output
+- Unit tests for AnalysisResult (6 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
