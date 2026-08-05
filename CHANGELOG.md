@@ -19,6 +19,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for RuleResult (6 tests, all passing)
 - models/player_stats.py: PlayerStats frozen dataclass for validated raw input
 - Unit tests for PlayerStats (7 tests, all passing)
+- models/metrics.py: Metrics frozen dataclass for computed values
+- Unit tests for Metrics (7 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized

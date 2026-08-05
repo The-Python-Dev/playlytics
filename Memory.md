@@ -49,15 +49,15 @@ After every completed module:
 ## Current Status
 
 **Phase:** 1 — Models
-**Current Module:** models/metrics.py
-**Overall Progress:** 3 of 28 modules complete
+**Current Module:** models/analysis_result.py
+**Overall Progress:** 4 of 28 modules complete
 
 Last action completed:
-- models/player_stats.py implemented and tested (7 tests passing)
+- models/metrics.py implemented and tested (7 tests passing)
 - CHANGELOG.md updated
 
 Next action:
-- Implement models/metrics.py
+- Implement models/analysis_result.py
 
 ## Approved Architecture
 
@@ -97,8 +97,8 @@ Phase 1 — Models
 ✅ models/severity.py
 ✅ models/rule_result.py
 ✅ models/player_stats.py
-⏳ models/metrics.py              ← CURRENT
-⬜ models/analysis_result.py
+✅ models/metrics.py
+⏳ models/analysis_result.py      ← CURRENT
 ⬜ models/validation_result.py
 ⬜ models/controller_result.py
 ⬜ models/configuration.py
@@ -192,6 +192,17 @@ Kills, deaths, accuracy, and weapon.
 Immutable to prevent accidental mutation during analysis.
 Derived values (K/D) live separately in Metrics.
 **Commit:** feat(models): add PlayerStats frozen dataclass with tests
+
+### models/metrics.py
+**Status:** ✅ Complete
+**Tests:** 7 passing (pytest)
+**Location:** src/models/metrics.py
+**Test Location:** tests/test_models/test_metrics.py
+**Description:**
+Frozen dataclass holding computed values derived from PlayerStats.
+K/D ratio, sample size, and small sample flag.
+Produced by MetricsCalculator, consumed by rules and analyzers.
+**Commit:** feat(models): add Metrics frozen dataclass with tests
 
 ## Key Design Decisions (Locked)
 
