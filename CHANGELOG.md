@@ -23,6 +23,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for Metrics (7 tests, all passing)
 - models/analysis_result.py: AnalysisResult frozen dataclass for full pipeline output
 - Unit tests for AnalysisResult (6 tests, all passing)
+- models/validation_result.py: ValidationResult frozen dataclass for validation output
+- Unit tests for ValidationResult (7 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
