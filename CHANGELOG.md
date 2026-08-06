@@ -45,6 +45,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for core/logger (10 tests, all passing)
 - validation/normalizer.py: Input normalization (whitespace, casing, aliases)
 - Unit tests for normalizer (20 tests, all passing)
+- validation/boundaries.py: Range and type checks for normalized input
+- Unit tests for boundaries (39 tests, all passing, includes V2.9 regression cases)
 
 ### Infrastructure
 - Git repository initialized

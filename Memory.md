@@ -49,15 +49,16 @@ After every completed module:
 ## Current Status
 
 **Phase:** 3 — Validation
-**Current Module:** validation/boundaries.py
-**Overall Progress:** 12 of 28 modules complete
-**Total Tests:** 102 passing (last full run)
+**Current Module:** validation/validator.py
+**Overall Progress:** 13 of 28 modules complete
+**Total Tests:** 141 passing
 
 Last action completed:
-- validation/normalizer.py implemented and tested (20 tests passing)
+- validation/boundaries.py implemented and tested (39 tests passing)
+- V2.9 regression cases B4, B5, N1, N2, N4 all pass
 
 Next action:
-- Implement validation/boundaries.py
+- Implement validation/validator.py (final Phase 3 module)
 
 ## Approved Architecture
 
@@ -110,8 +111,8 @@ Phase 2 — Core ✅ COMPLETE
 
 Phase 3 — Validation
 ✅ validation/normalizer.py
-⏳ validation/boundaries.py       ← CURRENT
-⬜ validation/validator.py
+✅ validation/boundaries.py
+⏳ validation/validator.py        ← CURRENT (final Phase 3 module)
 
 Phase 4 — Metrics Calculator
 ⬜ analyzers/metrics_calculator.py
@@ -299,6 +300,19 @@ strips whitespace, lowercases weapon strings, and resolves
 known aliases (e.g. 'ar' -> 'assault'). Never fails.
 Unknown inputs pass through unchanged for boundaries to reject.
 **Commit:** feat(validation): add input normalizer
+
+### validation/boundaries.py
+**Status:** ✅ Complete
+**Tests:** 39 passing (pytest)
+**Location:** src/validation/boundaries.py
+**Test Location:** tests/test_validation/test_boundaries.py
+**Description:**
+Second stage of the validation layer. Parses normalized string
+input into numbers and verifies ranges. Individual check functions
+per field (check_kills, check_deaths, check_accuracy, check_weapon)
+plus a check_all combiner that collects all errors at once.
+Never raises exceptions. Includes V2.9 regression tests.
+**Commit:** feat(validation): add boundary checks with V2.9 regression tests
 
 ## Phase Completion Log
 
