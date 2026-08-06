@@ -48,19 +48,16 @@ After every completed module:
 
 ## Current Status
 
-**Phase:** 3 — Validation (starting)
-**Current Module:** validation/normalizer.py
-**Overall Progress:** 11 of 28 modules complete
-**Total Tests:** 82 passing
-**Phase 2 Status:** ✅ COMPLETE
+**Phase:** 3 — Validation
+**Current Module:** validation/boundaries.py
+**Overall Progress:** 12 of 28 modules complete
+**Total Tests:** 102 passing (last full run)
 
 Last action completed:
-- core/logger.py implemented and tested (10 tests passing)
-- Phase 2 (Core) officially complete
+- validation/normalizer.py implemented and tested (20 tests passing)
 
 Next action:
-- Begin Phase 3 (Validation)
-- Implement validation/normalizer.py
+- Implement validation/boundaries.py
 
 ## Approved Architecture
 
@@ -112,8 +109,8 @@ Phase 2 — Core ✅ COMPLETE
 ✅ core/logger.py
 
 Phase 3 — Validation
-⏳ validation/normalizer.py       ← CURRENT
-⬜ validation/boundaries.py
+✅ validation/normalizer.py
+⏳ validation/boundaries.py       ← CURRENT
 ⬜ validation/validator.py
 
 Phase 4 — Metrics Calculator
@@ -290,6 +287,18 @@ for one-time setup at startup and get_logger() convenience wrapper.
 Supports console output by default and optional file logging.
 Uses standard library logging module only.
 **Commit:** feat(core): add application logging configuration
+
+### validation/normalizer.py
+**Status:** ✅ Complete
+**Tests:** 20 passing (pytest)
+**Location:** src/validation/normalizer.py
+**Test Location:** tests/test_validation/test_normalizer.py
+**Description:**
+First stage of the validation layer. Cleans raw user input:
+strips whitespace, lowercases weapon strings, and resolves
+known aliases (e.g. 'ar' -> 'assault'). Never fails.
+Unknown inputs pass through unchanged for boundaries to reject.
+**Commit:** feat(validation): add input normalizer
 
 ## Phase Completion Log
 

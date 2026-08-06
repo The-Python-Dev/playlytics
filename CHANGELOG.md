@@ -43,6 +43,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for core/exceptions (10 tests, all passing)
 - core/logger.py: Application-wide logging configuration
 - Unit tests for core/logger (10 tests, all passing)
+- validation/normalizer.py: Input normalization (whitespace, casing, aliases)
+- Unit tests for normalizer (20 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
