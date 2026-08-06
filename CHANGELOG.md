@@ -11,6 +11,10 @@ This project follows [Semantic Versioning](https://semver.org/).
 - All 8 model classes implemented and tested (52 tests passing)
 - Foundation layer ready for validation, rules, and analyzers
 
+### Phase 2 Complete
+- All 3 core utilities implemented and tested (30 tests passing)
+- Foundation utilities ready for validation and analysis layers
+
 ## [Unreleased] — 3.0.0 In Development
 
 ### Added
@@ -37,6 +41,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for core/config (10 tests, all passing)
 - core/exceptions.py: Custom exception hierarchy for internal errors
 - Unit tests for core/exceptions (10 tests, all passing)
+- core/logger.py: Application-wide logging configuration
+- Unit tests for core/logger (10 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized

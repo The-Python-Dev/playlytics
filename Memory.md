@@ -48,16 +48,19 @@ After every completed module:
 
 ## Current Status
 
-**Phase:** 2 — Core
-**Current Module:** core/logger.py
-**Overall Progress:** 10 of 28 modules complete
-**Total Tests:** 72 passing
+**Phase:** 3 — Validation (starting)
+**Current Module:** validation/normalizer.py
+**Overall Progress:** 11 of 28 modules complete
+**Total Tests:** 82 passing
+**Phase 2 Status:** ✅ COMPLETE
 
 Last action completed:
-- core/exceptions.py implemented and tested (10 tests passing)
+- core/logger.py implemented and tested (10 tests passing)
+- Phase 2 (Core) officially complete
 
 Next action:
-- Implement core/logger.py (final Phase 2 module)
+- Begin Phase 3 (Validation)
+- Implement validation/normalizer.py
 
 ## Approved Architecture
 
@@ -103,13 +106,13 @@ Phase 1 — Models ✅ COMPLETE
 ✅ models/controller_result.py
 ✅ models/configuration.py
 
-Phase 2 — Core
+Phase 2 — Core ✅ COMPLETE
 ✅ core/config.py
 ✅ core/exceptions.py
-⏳ core/logger.py                 ← CURRENT (final Phase 2 module)
+✅ core/logger.py
 
 Phase 3 — Validation
-⬜ validation/normalizer.py
+⏳ validation/normalizer.py       ← CURRENT
 ⬜ validation/boundaries.py
 ⬜ validation/validator.py
 
@@ -276,6 +279,18 @@ AnalysisError, and WeaponNotSupportedError. Never shown to the user.
 Caught at the controller boundary and translated to safe messages.
 **Commit:** feat(core): add custom exception hierarchy
 
+### core/logger.py
+**Status:** ✅ Complete
+**Tests:** 10 passing (pytest)
+**Location:** src/core/logger.py
+**Test Location:** tests/test_core/test_logger.py
+**Description:**
+Application-wide logging configuration. Provides configure_logging()
+for one-time setup at startup and get_logger() convenience wrapper.
+Supports console output by default and optional file logging.
+Uses standard library logging module only.
+**Commit:** feat(core): add application logging configuration
+
 ## Phase Completion Log
 
 ### Phase 1 — Models ✅
@@ -285,6 +300,15 @@ Caught at the controller boundary and translated to safe messages.
 **Summary:**
 All data models implemented and tested. Foundation layer complete.
 Every subsequent phase can now depend on these typed, immutable objects.
+
+### Phase 2 — Core ✅
+**Completed:** [Add date]
+**Modules:** 3
+**Tests:** 30 passing
+**Summary:**
+Core utilities complete. Constants centralized, custom exceptions
+defined, logging configured. Validation and analyzer layers can
+now depend on this foundation.
 
 ## Key Design Decisions (Locked)
 
