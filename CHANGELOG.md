@@ -33,6 +33,9 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for ControllerResult (7 tests, all passing)
 - models/configuration.py: Configuration frozen dataclass for analyzer settings
 - Unit tests for Configuration (7 tests, all passing)
+- core/config.py: Single source of truth for all analyzer constants
+- Unit tests for core/config (10 tests, all passing)
+
 ### Infrastructure
 - Git repository initialized
 - .gitignore configured

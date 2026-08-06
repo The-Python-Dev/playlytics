@@ -48,19 +48,17 @@ After every completed module:
 
 ## Current Status
 
-**Phase:** 2 — Core (starting)
-**Current Module:** core/config.py
-**Overall Progress:** 8 of 28 modules complete
-**Phase 1 Status:** ✅ COMPLETE (52 tests passing)
+**Phase:** 2 — Core
+**Current Module:** core/exceptions.py
+**Overall Progress:** 9 of 28 modules complete
+**Total Tests:** 62 passing
 
 Last action completed:
-- models/configuration.py implemented and tested (7 tests passing)
-- Full test suite passing (52 tests)
-- Phase 1 (Models) officially complete
+- core/config.py implemented and tested (10 tests passing)
+- All V2.9 threshold values preserved exactly
 
 Next action:
-- Begin Phase 2 (Core)
-- Implement core/config.py
+- Implement core/exceptions.py
 
 ## Approved Architecture
 
@@ -107,8 +105,8 @@ Phase 1 — Models ✅ COMPLETE
 ✅ models/configuration.py
 
 Phase 2 — Core
-⏳ core/config.py                  ← CURRENT
-⬜ core/exceptions.py
+✅ core/config.py
+⏳ core/exceptions.py             ← CURRENT
 ⬜ core/logger.py
 
 Phase 3 — Validation
@@ -253,6 +251,19 @@ Holds accuracy thresholds, K/D thresholds, sample size minimum,
 input limits, and supported weapons tuple. Actual values live in
 core/config.py. Passed as a dependency into rules and analyzers.
 **Commit:** feat(models): add Configuration frozen dataclass with tests
+
+### core/config.py
+**Status:** ✅ Complete
+**Tests:** 10 passing (pytest)
+**Location:** src/core/config.py
+**Test Location:** tests/test_core/test_config.py
+**Description:**
+Single source of truth for all analyzer constants. Holds accuracy
+thresholds, K/D thresholds, sample size minimum, input limits,
+supported weapons tuple, and weapon aliases. Provides
+get_default_configuration() factory that builds the Configuration
+object used throughout the analyzer. All values match V2.9 exactly.
+**Commit:** feat(core): add config module with constants and factory
 
 ## Phase Completion Log
 
