@@ -49,16 +49,15 @@ After every completed module:
 ## Current Status
 
 **Phase:** 2 — Core
-**Current Module:** core/exceptions.py
-**Overall Progress:** 9 of 28 modules complete
-**Total Tests:** 62 passing
+**Current Module:** core/logger.py
+**Overall Progress:** 10 of 28 modules complete
+**Total Tests:** 72 passing
 
 Last action completed:
-- core/config.py implemented and tested (10 tests passing)
-- All V2.9 threshold values preserved exactly
+- core/exceptions.py implemented and tested (10 tests passing)
 
 Next action:
-- Implement core/exceptions.py
+- Implement core/logger.py (final Phase 2 module)
 
 ## Approved Architecture
 
@@ -106,8 +105,8 @@ Phase 1 — Models ✅ COMPLETE
 
 Phase 2 — Core
 ✅ core/config.py
-⏳ core/exceptions.py             ← CURRENT
-⬜ core/logger.py
+✅ core/exceptions.py
+⏳ core/logger.py                 ← CURRENT (final Phase 2 module)
 
 Phase 3 — Validation
 ⬜ validation/normalizer.py
@@ -264,6 +263,18 @@ supported weapons tuple, and weapon aliases. Provides
 get_default_configuration() factory that builds the Configuration
 object used throughout the analyzer. All values match V2.9 exactly.
 **Commit:** feat(core): add config module with constants and factory
+
+### core/exceptions.py
+**Status:** ✅ Complete
+**Tests:** 10 passing (pytest)
+**Location:** src/core/exceptions.py
+**Test Location:** tests/test_core/test_exceptions.py
+**Description:**
+Custom exception hierarchy for internal analyzer errors.
+Base class PlaylyticsError with three subclasses: ValidationError,
+AnalysisError, and WeaponNotSupportedError. Never shown to the user.
+Caught at the controller boundary and translated to safe messages.
+**Commit:** feat(core): add custom exception hierarchy
 
 ## Phase Completion Log
 
