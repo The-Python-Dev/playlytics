@@ -61,6 +61,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for validator (13 tests, all passing, includes V2.9 cases)
 - analyzers/metrics_calculator.py: Derived metrics calculator (K/D, sample size, small sample flag)
 - Unit tests for metrics calculator (7 tests, all passing, zero-death protection verified)
+- rules/context.py: RuleContext frozen dataclass bundling stats, metrics, and config for rules
+- Unit tests for RuleContext (2 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
