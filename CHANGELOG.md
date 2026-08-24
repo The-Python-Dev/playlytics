@@ -65,6 +65,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for RuleContext (2 tests, all passing)
 - rules/base.py: Abstract Base Class for all gameplay rules
 - Unit tests for BaseRule interface contract (3 tests, all passing)
+- rules/rules/accuracy_rule.py: Accuracy diagnostic rule migrated from V2.9
+- Unit tests for accuracy_rule (6 tests, all passing, boundary P3-A & P3-B verified)
 
 ### Infrastructure
 - Git repository initialized
