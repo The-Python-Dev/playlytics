@@ -48,19 +48,19 @@ After every completed module:
 
 ## Current Status
 
-**Phase:** 4 — Metrics Calculator (starting)
-**Current Module:** analyzers/metrics_calculator.py
-**Overall Progress:** 14 of 28 modules complete
-**Total Tests:** ~154 passing
-**Phase 3 Status:** ✅ COMPLETE
+**Phase:** 5 — Rule Engine (starting)
+**Current Module:** rules/base.py
+**Overall Progress:** 15 of 28 modules complete
+**Total Tests:** ~161 passing
+**Phase 4 Status:** ✅ COMPLETE
 
 Last action completed:
-- validation/validator.py implemented and tested (13 tests passing)
-- Phase 3 (Validation) officially complete
+- analyzers/metrics_calculator.py implemented and tested (7 tests passing)
+- Phase 4 (Metrics Calculator) officially complete
 
 Next action:
-- Begin Phase 4 (Metrics Calculator)
-- Implement analyzers/metrics_calculator.py
+- Begin Phase 5 (Rule Engine)
+- Implement rules/base.py
 
 ## Approved Architecture
 
@@ -116,11 +116,11 @@ Phase 3 — Validation ✅ COMPLETE
 ✅ validation/boundaries.py
 ✅ validation/validator.py
 
-Phase 4 — Metrics Calculator
-⏳ analyzers/metrics_calculator.py   ← CURRENTss
+Phase 4 — Metrics Calculator ✅ COMPLETE
+✅ analyzers/metrics_calculator.py
 
 Phase 5 — Rule Engine
-⬜ rules/base.py
+⏳ rules/base.py                   ← CURRENT
 ⬜ rules/context.py
 ⬜ rules/rules/accuracy_rule.py
 ⬜ rules/rules/kd_rule.py
@@ -328,6 +328,17 @@ with either a clean PlayerStats or a list of human-readable errors.
 Never raises exceptions. Never calls exit(). Includes V2.9 cases.
 **Commit:** feat(validation): add validator orchestrator
 
+### analyzers/metrics_calculator.py
+**Status:** ✅ Complete
+**Tests:** 7 passing (pytest)
+**Location:** src/analyzers/metrics_calculator.py
+**Test Location:** tests/test_analyzers/test_metrics_calculator.py
+**Description:**
+Calculates derived performance metrics (K/D ratio, sample size,
+small sample flag) from validated PlayerStats. Handles zero deaths
+safely without division-by-zero errors.
+**Commit:** feat(analyzers): add metrics calculator
+
 ## Phase Completion Log
 
 ### Phase 1 — Models ✅
@@ -346,6 +357,18 @@ Every subsequent phase can now depend on these typed, immutable objects.
 Core utilities complete. Constants centralized, custom exceptions
 defined, logging configured. Validation and analyzer layers can
 now depend on this foundation.
+
+### Phase 3 — Validation ✅
+**Modules:** 3 (`normalizer.py`, `boundaries.py`, `validator.py`)
+**Tests:** 72 passing
+**Summary:**
+Validation layer complete. Raw input is normalized (stripped, lowercased, alias-resolved), boundary-checked (0-200 limits, 0-100 accuracy, supported weapons), and converted into typed PlayerStats or structured errors. The V2.9 exit() pattern is fully replaced with non-crashing ValidationResult objects.
+
+### Phase 4 — Metrics Calculator ✅
+**Modules:** 1 (`metrics_calculator.py`)
+**Tests:** 7 passing
+**Summary:**
+Metrics calculator layer complete. Converts PlayerStats into Metrics. Handles edge cases (zero deaths, zero kills) safely without division-by-zero errors, computes total sample size, and sets the small sample suppression flag for downstream rule evaluation.
 
 ## Key Design Decisions (Locked)
 

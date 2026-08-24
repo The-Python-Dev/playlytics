@@ -20,6 +20,11 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Normalizer, boundaries, and validator gate ready
 - V2.9 exit() pattern fully replaced with structured ValidationResult
 
+### Phase 4 Complete
+- Metrics calculator module implemented and tested
+- Handles zero deaths without division errors
+- Computes sample size and sets small sample suppression flag
+
 ## [Unreleased] — 3.0.0 In Development
 
 ### Added
@@ -54,6 +59,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for boundaries (39 tests, all passing, includes V2.9 regression cases)
 - validation/validator.py: Validation orchestrator returning ValidationResult
 - Unit tests for validator (13 tests, all passing, includes V2.9 cases)
+- analyzers/metrics_calculator.py: Derived metrics calculator (K/D, sample size, small sample flag)
+- Unit tests for metrics calculator (7 tests, all passing, zero-death protection verified)
 
 ### Infrastructure
 - Git repository initialized

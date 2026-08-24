@@ -365,14 +365,14 @@ release: v3.0.0
 | 1 | Models | ✅ Complete |
 | 2 | Core | ✅ Complete |
 | 3 | Validation | ✅ Complete |
-| 4 | Metrics Calculator | ⏳ Starting |
-| 5 | Rule Engine | ⬜ Not Started |
+| 4 | Metrics Calculator | ✅ Complete |
+| 5 | Rule Engine | ⏳ Starting |
 | 6 | Weapon Analyzers | ⬜ Not Started |
 | 7 | Router and Engine | ⬜ Not Started |
 | 8 | Controller | ⬜ Not Started |
 | 9 | UI | ⬜ Not Started |
 | 10 | Integration | ⬜ Not Started |
-| 11 | Packaging and Release | ⬜ Not Started |
+| 11 | Packaging and Release | ⬜ Not Started |s
 
 ---
 
