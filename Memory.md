@@ -48,17 +48,19 @@ After every completed module:
 
 ## Current Status
 
-**Phase:** 3 — Validation
-**Current Module:** validation/validator.py
-**Overall Progress:** 13 of 28 modules complete
-**Total Tests:** 141 passing
+**Phase:** 4 — Metrics Calculator (starting)
+**Current Module:** analyzers/metrics_calculator.py
+**Overall Progress:** 14 of 28 modules complete
+**Total Tests:** ~154 passing
+**Phase 3 Status:** ✅ COMPLETE
 
 Last action completed:
-- validation/boundaries.py implemented and tested (39 tests passing)
-- V2.9 regression cases B4, B5, N1, N2, N4 all pass
+- validation/validator.py implemented and tested (13 tests passing)
+- Phase 3 (Validation) officially complete
 
 Next action:
-- Implement validation/validator.py (final Phase 3 module)
+- Begin Phase 4 (Metrics Calculator)
+- Implement analyzers/metrics_calculator.py
 
 ## Approved Architecture
 
@@ -109,13 +111,13 @@ Phase 2 — Core ✅ COMPLETE
 ✅ core/exceptions.py
 ✅ core/logger.py
 
-Phase 3 — Validation
+Phase 3 — Validation ✅ COMPLETE
 ✅ validation/normalizer.py
 ✅ validation/boundaries.py
-⏳ validation/validator.py        ← CURRENT (final Phase 3 module)
+✅ validation/validator.py
 
 Phase 4 — Metrics Calculator
-⬜ analyzers/metrics_calculator.py
+⏳ analyzers/metrics_calculator.py   ← CURRENTss
 
 Phase 5 — Rule Engine
 ⬜ rules/base.py
@@ -313,6 +315,18 @@ per field (check_kills, check_deaths, check_accuracy, check_weapon)
 plus a check_all combiner that collects all errors at once.
 Never raises exceptions. Includes V2.9 regression tests.
 **Commit:** feat(validation): add boundary checks with V2.9 regression tests
+
+### validation/validator.py
+**Status:** ✅ Complete
+**Tests:** 13 passing (pytest)
+**Location:** src/validation/validator.py
+**Test Location:** tests/test_validation/test_validator.py
+**Description:**
+Main entry point for the validation layer. Orchestrates normalizer
+and boundaries. Takes raw string input, returns ValidationResult
+with either a clean PlayerStats or a list of human-readable errors.
+Never raises exceptions. Never calls exit(). Includes V2.9 cases.
+**Commit:** feat(validation): add validator orchestrator
 
 ## Phase Completion Log
 

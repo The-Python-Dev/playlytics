@@ -364,8 +364,8 @@ release: v3.0.0
 | 0 | Project Setup | ✅ Complete |
 | 1 | Models | ✅ Complete |
 | 2 | Core | ✅ Complete |
-| 3 | Validation | ⏳ Starting |
-| 4 | Metrics Calculator | ⬜ Not Started |
+| 3 | Validation | ✅ Complete |
+| 4 | Metrics Calculator | ⏳ Starting |
 | 5 | Rule Engine | ⬜ Not Started |
 | 6 | Weapon Analyzers | ⬜ Not Started |
 | 7 | Router and Engine | ⬜ Not Started |
