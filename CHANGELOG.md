@@ -63,6 +63,8 @@ This project follows [Semantic Versioning](https://semver.org/).
 - Unit tests for metrics calculator (7 tests, all passing, zero-death protection verified)
 - rules/context.py: RuleContext frozen dataclass bundling stats, metrics, and config for rules
 - Unit tests for RuleContext (2 tests, all passing)
+- rules/base.py: Abstract Base Class for all gameplay rules
+- Unit tests for BaseRule interface contract (3 tests, all passing)
 
 ### Infrastructure
 - Git repository initialized
